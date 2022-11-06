@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatorcument</title>
+</head>
+<script>
+    function osszead()
+    {
+        var szam1 = document.getElementById('szam1').value;
+        var szam2 = document.getElementById('szam2').value;
+        document.getElementById('kiir').innerHTML = parseInt(szam1) + parseInt(szam2);
+    }
+    function kivon()
+    {
+        var szam1 = document.getElementById('szam1').value;
+        var szam2 = document.getElementById('szam2').value;
+        document.getElementById('kiir').innerHTML = parseInt(szam1) - parseInt(szam2);
+    }
+    function Szoroz()
+    {
+        var szam1 = document.getElementById('szam1').value;
+        var szam2 = document.getElementById('szam2').value;
+        document.getElementById('kiir').innerHTML = parseInt(szam1) * parseInt(szam2);
+    }
+    function oszt()
+    {
+        var szam1 = document.getElementById('szam1').value;
+        var szam2 = document.getElementById('szam2').value;
+        document.getElementById('kiir').innerHTML = parseInt(szam1) / parseInt(szam2);
+    }
+</script>
+<body>
+    <p>Kérem az első számot:</p>
+    <input id="szam1" type="text">
+    <p>Kérem a második számot:</p>
+    <input id="szam2" type="text">
+    <br><br>
+    <input type="button" onclick="osszead()" value="+">
+    <input type="button" onclick="kivon()" value="-">
+    <input type="button" onclick="Szoroz()" value="*">
+    <input type="button" onclick="oszt()" value="/">
+    <p>Eredmény:</p>
+    <p id="kiir"></p>
+</body>
+</html>
